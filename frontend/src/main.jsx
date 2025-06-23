@@ -4,6 +4,13 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import App from './App';
 import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
+import PeoplePage from './pages/PeoplePage';
+import ContactPage from './pages/ContactPage';
+import ResearchPage from './pages/ResearchPage';
+import PhdProgramPage from './pages/PhdProgramPage';
+import MscProgramPage from './pages/MscProgramPage';
+import BtechProgramPage from './pages/BtechProgramPage';
 
 const router = createBrowserRouter([
   {
@@ -12,9 +19,38 @@ const router = createBrowserRouter([
     // errorElement:<ErrorPage/>,
     children: [
       {
-        index: true,
+        path:'/',
         element: <HomePage />,
       },
+      {
+        path:'login',
+        element:<LoginPage/>
+      },
+      {
+        path:'people',
+        element:<PeoplePage/>
+      },
+      {
+        path:'contact',
+        element:<ContactPage/>
+      },
+      {
+        path:'research',
+        element:<ResearchPage/>
+      },
+      {
+        path:'programs/phd',
+        element:<PhdProgramPage/>
+      },
+      {
+        path:'programs/msc',
+        element:<MscProgramPage/>
+      },
+      {
+        path:'programs/btech',
+        element:<BtechProgramPage/>
+      },
+
     ],
   },
 ]);
