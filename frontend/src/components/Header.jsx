@@ -43,9 +43,11 @@ const Header = () => {
           <li className="relative">
             <NavLink
               to="/programs"
-              className={`flex cursor-pointer justify-between items-center gap-2 ${({
-                isActive,
-              }) => (isActive ? 'text-cyan-400' : '')}`}
+              className={({ isActive }) =>
+                `flex cursor-pointer justify-between items-center gap-2 ${
+                  isActive ? 'text-cyan-400' : ''
+                }`
+              }
             >
               Academic Programs
             </NavLink>
@@ -112,9 +114,11 @@ const Header = () => {
               <li className="relative">
                 <NavLink
                   to="/programs"
-                  className={`flex cursor-pointer justify-between items-center gap-2 ${({
-                    isActive,
-                  }) => (isActive ? 'text-cyan-400' : '')}`}
+                  className={({ isActive }) =>
+                    `flex cursor-pointer justify-between items-center gap-2 ${
+                      isActive ? 'text-cyan-400' : ''
+                    }`
+                  }
                 >
                   Academic Programs
                 </NavLink>
