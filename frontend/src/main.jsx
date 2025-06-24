@@ -4,6 +4,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import App from './App';
 import HomePage from './pages/HomePage';
+import Programs from './pages/Programs';
+import BTech from './pages/BTech';
+import MSc from './pages/MSc';
+import PhD from './pages/PhD';
 
 const router = createBrowserRouter([
   {
@@ -15,6 +19,15 @@ const router = createBrowserRouter([
         index: true,
         element: <HomePage />,
       },
+      {
+        path: '/programs',
+        element: <Programs />,
+        children: [
+          {path: 'btech', element: <BTech />},
+          {path: 'msc', element: <MSc />},
+          {path: 'phd', element: <PhD />},
+        ]
+      }
     ],
   },
 ]);
