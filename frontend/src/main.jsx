@@ -8,6 +8,10 @@ import Programs from './pages/Programs';
 import BTech from './pages/BTech';
 import MSc from './pages/MSc';
 import PhD from './pages/PhD';
+import LoginPage from './pages/LoginPage';
+import PeoplePage from './pages/PeoplePage';
+import ContactPage from './pages/ContactPage';
+import ResearchPage from './pages/ResearchPage';
 
 const router = createBrowserRouter([
   {
@@ -16,7 +20,7 @@ const router = createBrowserRouter([
     // errorElement:<ErrorPage/>,
     children: [
       {
-        index: true,
+        path:'/',
         element: <HomePage />,
       },
       {
@@ -27,7 +31,24 @@ const router = createBrowserRouter([
           {path: 'msc', element: <MSc />},
           {path: 'phd', element: <PhD />},
         ]
-      }
+      },
+      {
+
+        path:'login',
+        element:<LoginPage/>
+      },
+      {
+        path:'people',
+        element:<PeoplePage/>
+      },
+      {
+        path:'contact',
+        element:<ContactPage/>
+      },
+      {
+        path:'research',
+        element:<ResearchPage/>
+      },
     ],
   },
 ]);
