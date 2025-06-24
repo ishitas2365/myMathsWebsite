@@ -1,12 +1,10 @@
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import logo from '../assets/images/iiti-logo.png';
-import downArrow from '../assets/images/down-arrow.png';
 import hamMenu from '../assets/images/menu.svg';
 import close from '../assets/images/close.svg';
 
 const Header = () => {
-  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
   const [isHamClicked, setIsHamClicked] = useState(false);
   return (
     <div>
@@ -43,62 +41,14 @@ const Header = () => {
             </NavLink>
           </li>
           <li className="relative">
-            <button
-              onClick={() => setIsDropdownVisible((prev) => !prev)}
-              className="flex cursor-pointer justify-between items-center gap-2"
+            <NavLink
+              to="/programs"
+              className={`flex cursor-pointer justify-between items-center gap-2 ${({
+                isActive,
+              }) => (isActive ? 'text-cyan-400' : '')}`}
             >
               Academic Programs
-              <img
-                className={`max-w-3 transition-all duration-300 ${
-                  isDropdownVisible ? 'rotate-[-180deg]' : 'rotate-0'
-                }`}
-                src={downArrow}
-                alt="down-arrow"
-              />
-            </button>
-
-            <ul
-              className={`p-3 transition-all duration-300 pt-0 absolute rounded-b-[4px] flex flex-col bg-[#142383] max-sm:top-[36px] sm:top-[36px] md:top-[44px] right-0 w-full
-    ${
-      isDropdownVisible
-        ? 'opacity-100 visible translate-y-0'
-        : 'opacity-0 invisible -translate-y-2'
-    }`}
-            >
-              <li className="max-w-fit ">
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive ? 'text-cyan-400' : ''
-                  }
-                  to="/programs/phd"
-                >
-                  Ph.D.
-                </NavLink>
-                <div className="w-full h-[1px] bg-gray-600"></div>
-              </li>
-              <li className="max-w-fit">
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive ? 'text-cyan-400' : ''
-                  }
-                  to="/programs/msc"
-                >
-                  M.Sc.
-                </NavLink>
-                <div className="w-full h-[1px] bg-gray-600"></div>
-              </li>
-              <li className="max-w-fit">
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive ? 'text-cyan-400' : ''
-                  }
-                  to="/programs/btech"
-                >
-                  B.Tech.
-                </NavLink>
-                <div className="w-full h-[1px] bg-gray-600"></div>
-              </li>
-            </ul>
+            </NavLink>
           </li>
           <li>
             <NavLink
@@ -160,62 +110,14 @@ const Header = () => {
                 </NavLink>
               </li>
               <li className="relative">
-                <button
-                  onClick={() => setIsDropdownVisible((prev) => !prev)}
-                  className="flex cursor-pointer justify-between items-center gap-2"
+                <NavLink
+                  to="/programs"
+                  className={`flex cursor-pointer justify-between items-center gap-2 ${({
+                    isActive,
+                  }) => (isActive ? 'text-cyan-400' : '')}`}
                 >
                   Academic Programs
-                  <img
-                    className={`max-w-3 transition-all duration-300 ${
-                      isDropdownVisible ? 'rotate-[-180deg]' : 'rotate-[0deg]'
-                    }`}
-                    src={downArrow}
-                    alt="down-arrow"
-                  />
-                </button>
-
-                <ul
-                  className={`p-3 transition-all duration-300 pt-0 absolute rounded-[4px] flex flex-col bg-[#142383] top-[24px] left-[170px] w-full
-    ${
-      isDropdownVisible
-        ? 'opacity-100 visible translate-y-0'
-        : 'opacity-0 invisible -translate-y-2'
-    }`}
-                >
-                  <li className="max-w-fit ">
-                    <NavLink
-                      className={({ isActive }) =>
-                        isActive ? 'text-cyan-400' : ''
-                      }
-                      to="/programs/phd"
-                    >
-                      Ph.D.
-                    </NavLink>
-                    <div className="w-full h-[1px] bg-gray-600"></div>
-                  </li>
-                  <li className="max-w-fit">
-                    <NavLink
-                      className={({ isActive }) =>
-                        isActive ? 'text-cyan-400' : ''
-                      }
-                      to="/programs/msc"
-                    >
-                      M.Sc.
-                    </NavLink>
-                    <div className="w-full h-[1px] bg-gray-600"></div>
-                  </li>
-                  <li className="max-w-fit">
-                    <NavLink
-                      className={({ isActive }) =>
-                        isActive ? 'text-cyan-400' : ''
-                      }
-                      to="/programs/btech"
-                    >
-                      B.Tech.
-                    </NavLink>
-                    <div className="w-full h-[1px] bg-gray-600"></div>
-                  </li>
-                </ul>
+                </NavLink>
               </li>
               <li>
                 <NavLink
