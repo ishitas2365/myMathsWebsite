@@ -7,7 +7,7 @@ import close from '../assets/images/close.svg';
 const Header = () => {
   const [isHamClicked, setIsHamClicked] = useState(false);
   return (
-    <div>
+    <div className='font-poppins'>
       <header className="flex items-center justify-start gap-6 pl-8">
         <div>
           <NavLink to="https://www.iiti.ac.in/">
