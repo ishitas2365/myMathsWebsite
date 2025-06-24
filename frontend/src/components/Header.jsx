@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import logo from '../assets/images/iiti-logo.png';
 import downArrow from '../assets/images/down-arrow.png';
@@ -12,30 +12,35 @@ const Header = () => {
     <div>
       <header className="flex items-center justify-start gap-6 pl-8">
         <div>
-          <Link to="https://www.iiti.ac.in/">
+          <NavLink to="https://www.iiti.ac.in/">
             <img className="max-w-24" src={logo} alt="IIT Indore Logo" />
-          </Link>
+          </NavLink>
         </div>
         <div className="flex flex-col justify-between items-start max-sm:gap-0 gap-1  tracking-wide">
           <div>
-            <Link to="/" className="max-sm:text-2xl sm:text-3xl md:text-4xl">
+            <NavLink to="/" className="max-sm:text-2xl sm:text-3xl md:text-4xl">
               DEPARTMENT OF MATHEMATICS
-            </Link>
+            </NavLink>
           </div>
           <div>
-            <Link
+            <NavLink
               to="https://www.iiti.ac.in/"
               className="max-sm:text-[12px] sm:text-[16px] md:text-xl text-[#949393]"
             >
               INDIAN INSTITUTE OF TECHNOLOGY
-            </Link>
+            </NavLink>
           </div>
         </div>
       </header>
       <nav className="bg-[#040C3D] text-white flex flex-col justify-center items-center ">
         <ul className="flex max-sm:hidden justify-between items-center max-sm:gap-3 max-sm:py-3 sm:gap-6 sm:py-3 md:gap-12 md:py-5">
           <li>
-            <Link to="/">Home</Link>
+            <NavLink
+              className={({ isActive }) => (isActive ? 'text-cyan-400' : '')}
+              to="/"
+            >
+              Home
+            </NavLink>
           </li>
           <li className="relative">
             <button
@@ -61,30 +66,71 @@ const Header = () => {
     }`}
             >
               <li className="max-w-fit ">
-                <Link to="/programs/phd">Ph.D.</Link>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? 'text-cyan-400' : ''
+                  }
+                  to="/programs/phd"
+                >
+                  Ph.D.
+                </NavLink>
                 <div className="w-full h-[1px] bg-gray-600"></div>
               </li>
               <li className="max-w-fit">
-                <Link to="/programs/msc">M.Sc.</Link>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? 'text-cyan-400' : ''
+                  }
+                  to="/programs/msc"
+                >
+                  M.Sc.
+                </NavLink>
                 <div className="w-full h-[1px] bg-gray-600"></div>
               </li>
               <li className="max-w-fit">
-                <Link to="/programs/btech">B.Tech.</Link>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? 'text-cyan-400' : ''
+                  }
+                  to="/programs/btech"
+                >
+                  B.Tech.
+                </NavLink>
                 <div className="w-full h-[1px] bg-gray-600"></div>
               </li>
             </ul>
           </li>
           <li>
-            <Link to="/people">People</Link>
+            <NavLink
+              className={({ isActive }) => (isActive ? 'text-cyan-400' : '')}
+              to="/people"
+            >
+              People
+            </NavLink>
           </li>
           <li>
-            <Link to="/research">Research</Link>
+            <NavLink
+              className={({ isActive }) => (isActive ? 'text-cyan-400' : '')}
+              to="/research"
+            >
+              Research
+            </NavLink>
           </li>
           <li>
-            <Link to="/contact">Contact Us</Link>
+            <NavLink
+              className={({ isActive }) => (isActive ? 'text-cyan-400' : '')}
+              to="/contact"
+            >
+              Contact Us
+            </NavLink>
           </li>
           <li>
-            <Link to="login">Log In</Link>
+            <NavLink
+              className={({ isActive }) => (isActive ? 'text-cyan-400' : '')}
+              to="login"
+            >
+              Log In
+            </NavLink>
           </li>
         </ul>
         <div className="sm:hidden w-full  flex flex-col justify-between items-start">
@@ -97,14 +143,6 @@ const Header = () => {
               }}
               className={`w-8 h-8 cursor-pointer`}
             />
-            {/* <img
-              src={close}
-              alt="close"
-              onClick={() => {
-                setIsHamClicked((prev) => !prev);
-              }}
-              className={`w-8 h-8 cursor-pointer`}
-            /> */}
           </div>
           <div
             className={`w-full overflow-hidden transition-all duration-600 ease-in-out transform
@@ -112,7 +150,14 @@ const Header = () => {
           >
             <ul className="ml-5 flex flex-col bg-[#040C3D] text-white justify-between items-start max-sm:gap-3 max-sm:py-3 sm:gap-6 sm:py-3 md:gap-12 md:py-5">
               <li>
-                <Link to="/">Home</Link>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? 'text-cyan-400' : ''
+                  }
+                  to="/"
+                >
+                  Home
+                </NavLink>
               </li>
               <li className="relative">
                 <button
@@ -138,30 +183,79 @@ const Header = () => {
     }`}
                 >
                   <li className="max-w-fit ">
-                    <Link to="/programs/phd">Ph.D.</Link>
+                    <NavLink
+                      className={({ isActive }) =>
+                        isActive ? 'text-cyan-400' : ''
+                      }
+                      to="/programs/phd"
+                    >
+                      Ph.D.
+                    </NavLink>
                     <div className="w-full h-[1px] bg-gray-600"></div>
                   </li>
                   <li className="max-w-fit">
-                    <Link to="/programs/msc">M.Sc.</Link>
+                    <NavLink
+                      className={({ isActive }) =>
+                        isActive ? 'text-cyan-400' : ''
+                      }
+                      to="/programs/msc"
+                    >
+                      M.Sc.
+                    </NavLink>
                     <div className="w-full h-[1px] bg-gray-600"></div>
                   </li>
                   <li className="max-w-fit">
-                    <Link to="/programs/btech">B.Tech.</Link>
+                    <NavLink
+                      className={({ isActive }) =>
+                        isActive ? 'text-cyan-400' : ''
+                      }
+                      to="/programs/btech"
+                    >
+                      B.Tech.
+                    </NavLink>
                     <div className="w-full h-[1px] bg-gray-600"></div>
                   </li>
                 </ul>
               </li>
               <li>
-                <Link to="/people">People</Link>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? 'text-cyan-400' : ''
+                  }
+                  to="/people"
+                >
+                  People
+                </NavLink>
               </li>
               <li>
-                <Link to="/research">Research</Link>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? 'text-cyan-400' : ''
+                  }
+                  to="/research"
+                >
+                  Research
+                </NavLink>
               </li>
               <li>
-                <Link to="/contact">Contact Us</Link>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? 'text-cyan-400' : ''
+                  }
+                  to="/contact"
+                >
+                  Contact Us
+                </NavLink>
               </li>
               <li>
-                <Link to="login">Log In</Link>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? 'text-cyan-400' : ''
+                  }
+                  to="login"
+                >
+                  Log In
+                </NavLink>
               </li>
             </ul>
           </div>
