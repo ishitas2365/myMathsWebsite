@@ -14,7 +14,7 @@ const PeoplePage = () => {
       <div className="text-4xl font-bold text-center text-black mb-6 inline-block border-b-4 border-[#4c83bb] pb-4">
         PEOPLE
       </div>
-      <div className="grid gap-5  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
         <PeopleCard navigateto='faculty' designation='Faculty' number={20} imgSrc={faculty}/>
         <PeopleCard navigateto='former-hod-and-faculty' designation='Former HoD and Faculty' number={11} imgSrc={formerFaculty}/>
         <PeopleCard navigateto='staff-and-committess' designation='Staff and Committees' number={2} imgSrc={iitLogo}/>
