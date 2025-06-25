@@ -17,7 +17,7 @@ const PeopleCard = ({ designation, number, imgSrc, navigateto }) => {
       <div className="text-5xl text-cyan-500 font-bold mt-4">{number}</div>
 
       <div className="text-[18px] w-full text-white bg-[#040C3D] rounded-lg text-center mt-2 leading-tight min-h-[60px] flex items-center justify-center text-ellipsis overflow-hidden text-nowrap">
-        {designation}
+        {designation }
       </div>
     </Link>
   );
