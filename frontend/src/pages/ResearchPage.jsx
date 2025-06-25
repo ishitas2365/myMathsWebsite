@@ -30,7 +30,7 @@ const labs = [
   },
   {
     name: 'Brahmagupta Mathematics Library',
-    leader: 'UPPORTED BY DST-FIST & NBHM',
+    leader: 'SUPPORTED BY DST-FIST & NBHM',
     description:
       'Rich collection of mathematical literature supported by DST-FIST and NBHM. Open to department scholars.',
     image: lab4,
@@ -60,8 +60,8 @@ const ResearchPage = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black opacity-0 group-hover:opacity-40 transition duration-300" />
               </div>
-              <h3 className="text-xl mb-1 font-bold text-[#4c83bb]">{lab.name}</h3>
-              <p className="text-medium text-black font-medium mb-2">{lab.leader}</p>
+              <h3 className="text-xl mb-1 font-bold text-[#052569]">{lab.name}</h3>  
+              <p className="text-medium text-[#4c83bb] font-medium mb-2">{lab.leader}</p>
               <p className="text-sm font-semibold mb-3">{lab.description}</p>
               {lab.link && (
                 <a

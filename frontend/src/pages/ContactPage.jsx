@@ -12,7 +12,7 @@ const ContactPage = () => {
 
         <div className="bg-white shadow-lg rounded-2xl p-8">
 
-        <h2 className="text-3xl font-bold text-[#4c83bb] text-center mb-10">
+        <h2 className="text-3xl font-bold text-[#052569] text-center mb-10">
           Department of Mathematics, IIT Indore
         </h2>
 

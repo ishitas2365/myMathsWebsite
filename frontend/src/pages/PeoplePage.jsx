@@ -10,11 +10,13 @@ import alumni from '../assets/images/alumni.png'
 
 const PeoplePage = () => {
   return (
-    <div className="max-w-[75vw] m-auto my-12">
+    <div className="max-w-[75vw] m-auto my-12 px=">
       <div className="text-4xl font-bold text-center text-black mb-6 inline-block border-b-4 border-[#4c83bb] pb-4">
         PEOPLE
       </div>
-      <div className="grid gap-6  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
+      {/* <div className="grid gap-6  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 "> */}
+      <div className="grid gap-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+
         <PeopleCard navigateto='faculty' designation='Faculty' number={20} imgSrc={faculty}/>
         <PeopleCard navigateto='former-hod-and-faculty' designation='Former HoD and Faculty' number={11} imgSrc={formerFaculty}/>
         <PeopleCard navigateto='staff-and-committess' designation='Staff and Committees' number={2} imgSrc={iitLogo}/>
