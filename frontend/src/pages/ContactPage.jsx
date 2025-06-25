@@ -5,9 +5,10 @@ const ContactPage = () => {
   return (
     <section className="min-h-screen bg-gray-50 px-6 py-12">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-black mb-6 border-b-4 border-[#4c83bb] pb-4 text-left">
+        <h1 className="text-4xl font-bold text-black mb-2 text-left">
           CONTACT US
         </h1>
+        <div className="w-24 h-1 bg-[#4c83bb] mb-6 rounded-sm"></div>
 
         <div className="bg-white shadow-lg rounded-2xl p-8">
 
