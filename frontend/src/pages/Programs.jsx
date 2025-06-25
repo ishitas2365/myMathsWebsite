@@ -20,8 +20,9 @@ const Programs = () => {
   return (
     <section className="min-h-screen bg-gray-50 px-6 py-12">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-center text-black mb-6 inline-block border-b-4 border-[#4c83bb] pb-4">
+        <h1 className="text-4xl font-bold text-center text-black mb-4 inline-block">
           PROGRAMS
+          <div className="w-30 h-1 bg-[#4c83bb] mb-4 rounded-sm mt-3"></div>
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* B.Tech Card */}
