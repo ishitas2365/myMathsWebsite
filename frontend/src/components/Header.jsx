@@ -8,29 +8,29 @@ const Header = () => {
   const [isHamClicked, setIsHamClicked] = useState(false);
   return (
     <div className='font-bold'>
-      <header className="flex items-center justify-start gap-6 pl-8">
+      <header className="flex items-center justify-start gap-6 pl-8 mb-5 mt-5">
         <div>
           <NavLink to="https://www.iiti.ac.in/">
             <img className="max-w-24" src={logo} alt="IIT Indore Logo" />
           </NavLink>
         </div>
-        <div className="flex flex-col justify-between items-start max-sm:gap-0 gap-1  tracking-wide">
+        <div className="flex flex-col justify-between items-start max-sm:gap-0 gap-1  tracking-wide ">
           <div>
-            <NavLink to="/" className="max-sm:text-2xl sm:text-3xl md:text-4xl">
-              DEPARTMENT OF MATHEMATICS
+            <NavLink to="/" className="max-sm:text-2xl sm:text-3xl md:text-4xl text-[#4c83bb]">
+              Department of Mathematics
             </NavLink>
           </div>
           <div>
             <NavLink
               to="https://www.iiti.ac.in/"
-              className="max-sm:text-[12px] sm:text-[16px] md:text-xl text-[#949393]"
+              className="max-sm:text-[12px] sm:text-[16px] md:text-xl text-black"
             >
-              INDIAN INSTITUTE OF TECHNOLOGY
+              Indian Institute of Technology Indore
             </NavLink>
           </div>
         </div>
       </header>
-      <nav className="bg-[#040C3D] text-white flex flex-col justify-center items-center ">
+      <nav className="bg-[#040C3D] text-white flex flex-col justify-center items-center py-5">
         <ul className="flex max-sm:hidden justify-between items-center max-sm:gap-3 max-sm:py-3 sm:gap-6 sm:py-3 md:gap-12 md:py-5">
           <li>
             <NavLink
