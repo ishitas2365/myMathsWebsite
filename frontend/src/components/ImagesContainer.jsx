@@ -15,7 +15,6 @@ const ImagesContainer = ({ imageUrls, title, description }) => {
 
   return (
     <div className="bg-white rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-in-out hover:scale-[1.02] hover:shadow-xl hover:-translate-y-1">
-      {/* Flex container: column on mobile, row on md+ */}
       <div className="flex flex-col items-start md:flex-row">
         {/* Image scroll area */}
         <div className="relative w-full md:w-1/2 h-64 md:h-[500px] overflow-hidden">
@@ -33,7 +32,6 @@ const ImagesContainer = ({ imageUrls, title, description }) => {
             ))}
           </div>
 
-          {/* Left arrow */}
           <button
             onClick={showPreviousImg}
             className="absolute top-0 cursor-pointer bottom-0 left-0 p-1  hover:bg-[rgba(0,0,0,0.5)] hover:scale-110 transition"
@@ -42,7 +40,6 @@ const ImagesContainer = ({ imageUrls, title, description }) => {
             <img src={arrowLeft} alt="Previous" className="w-6 h-6" />
           </button>
 
-          {/* Right arrow */}
           <button
             onClick={showNextImg}
             className="absolute top-0 cursor-pointer bottom-0 right-0 p-1  hover:bg-[rgba(0,0,0,0.5)] hover:scale-110 transition"
@@ -68,7 +65,7 @@ const ImagesContainer = ({ imageUrls, title, description }) => {
           </div>
         </div>
 
-        {/* Description area */}
+        {/* About Section*/}
         <div className="w-full md:w-1/2 p-4 flex flex-col justify-center">
           <h2 className="text-xl font-bold text-[#093867] mb-2 border-b-2 border-[#093867] inline-block pb-1">
             {title}
