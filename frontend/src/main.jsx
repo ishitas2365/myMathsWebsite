@@ -12,6 +12,7 @@ import LoginPage from './pages/LoginPage';
 import PeoplePage from './pages/PeoplePage';
 import ContactPage from './pages/ContactPage';
 import ResearchPage from './pages/ResearchPage';
+import GalleryPage from './pages/GalleryPage';
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
         path:'research',
         element:<ResearchPage/>
       },
+      {
+        path:'gallery',
+        element:<GalleryPage/>
+      }
     ],
   },
 ]);

@@ -7,7 +7,7 @@ import close from '../assets/images/close.svg';
 const Header = () => {
   const [isHamClicked, setIsHamClicked] = useState(false);
   return (
-    <div className='font-bold'>
+    <div className="font-bold">
       <header className="flex items-center justify-start gap-6 pl-8 mb-5 mt-5">
         <div>
           <NavLink to="https://www.iiti.ac.in/">
@@ -16,7 +16,10 @@ const Header = () => {
         </div>
         <div className="flex flex-col justify-between items-start max-sm:gap-0 gap-1  tracking-wide ">
           <div>
-            <NavLink to="/" className="max-sm:text-2xl sm:text-3xl md:text-4xl text-[#4c83bb]">
+            <NavLink
+              to="/"
+              className="max-sm:text-2xl sm:text-3xl md:text-4xl text-[#4c83bb]"
+            >
               Department of Mathematics
             </NavLink>
           </div>
@@ -82,6 +85,14 @@ const Header = () => {
               to="login"
             >
               Log In
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={({ isActive }) => (isActive ? 'text-cyan-400' : '')}
+              to="gallery"
+            >
+              Gallery
             </NavLink>
           </li>
         </ul>
@@ -161,6 +172,16 @@ const Header = () => {
                   to="login"
                 >
                   Log In
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? 'text-cyan-400' : ''
+                  }
+                  to="gallery"
+                >
+                  Gallery
                 </NavLink>
               </li>
             </ul>

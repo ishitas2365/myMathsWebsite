@@ -10,7 +10,7 @@ import alumni from '../assets/images/alumni.png'
 
 const PeoplePage = () => {
   return (
-    <div className="max-w-[75vw] m-auto my-12 px=">
+    <div className="max-w-[75vw] m-auto my-12">
       <div className="text-4xl font-bold text-center text-black mb-6 inline-block border-b-4 border-[#4c83bb] pb-4">
         PEOPLE
       </div>
