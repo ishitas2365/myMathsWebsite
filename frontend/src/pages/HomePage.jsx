@@ -18,71 +18,91 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* Quick Links */}
-      <div className="max-w-md mx-auto mt-16 p-6 bg-gray-900 text-white rounded-lg shadow-md border-4 border-gray-800">
-        <h1 className="text-3xl font-bold mb-4">QUICK LINKS</h1>
-        <hr className="border-t-2 border-gray-400 mb-4" />
-        <ul className="space-y-2 text-lg">
-          <li><a href="#" className="hover:text-pink-400">Timetable</a></li>
-          <li><a href="#" className="hover:text-pink-400">Syllabus</a></li>
-          <li><a href="#" className="hover:text-pink-400">Faculty Login</a></li>
-          <li><a href="#" className="hover:text-pink-400">Research Areas</a></li>
-          <li><a href="#" className="hover:text-pink-400">Events</a></li>
-          <li><a href="#" className="hover:text-pink-400">Notices</a></li>
-          <li><a href="#" className="hover:text-pink-400">Admissions</a></li>
-          <li><a href="#" className="hover:text-pink-400">Student Portal</a></li>
-        </ul>
+
+
+      <div className="grid grid-cols-2 max-h-200">
+          {/* Quick Links */}
+        <div className="max-w-md mx-auto mt-16 p-6 bg-gray-900 text-white rounded-lg shadow-md border-4 border-gray-800 w-full mr-0">
+          <h1 className="text-3xl font-bold mb-4">QUICK LINKS</h1>
+          <hr className="border-t-2 border-gray-400 mb-4" />
+          <ul className="space-y-2 text-lg">
+            <li><a href="#" className="hover:text-pink-400">Timetable</a></li>
+            <li><a href="#" className="hover:text-pink-400">Syllabus</a></li>
+            <li><a href="#" className="hover:text-pink-400">Faculty Login</a></li>
+            <li><a href="#" className="hover:text-pink-400">Research Areas</a></li>
+            <li><a href="#" className="hover:text-pink-400">Events</a></li>
+            <li><a href="#" className="hover:text-pink-400">Notices</a></li>
+            <li><a href="#" className="hover:text-pink-400">Admissions</a></li>
+            <li><a href="#" className="hover:text-pink-400">Student Portal</a></li>
+          </ul>
+        </div>
+        <div className="grid grid-cols-1">
+          {/* Announcements */}
+          <div className="max-w-4xl mx-auto mt-16 p-6 bg-white rounded-lg shadow-md border-4 border-gray-800 ml-0 w-100">
+            <h1 className="text-3xl font-bold mb-4">ANNOUNCEMENTS</h1>
+            <hr className="border-t-2 border-gray-400 mb-4" />
+            <ul className="list-disc pl-6 space-y-2 text-lg">
+              <li><a href="#">New B.Tech program launched</a></li>
+              <li><a href="#">PhD Admissions Open</a></li>
+              <li><a href="#">Mid-Sem Exam Schedule Released</a></li>
+              <li><a href="#">Convocation 2025 Notice</a></li>
+            </ul>
+            <div className="mt-4 text-right">
+              <a href="/announcements" className="text-sm inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-red-500 text-white rounded hover:brightness-110">View All</a>
+            </div>
+          </div>
+          {/* News */}
+          <div className="max-w-4xl mx-auto mt-0 p-6 bg-gray-900 text-white rounded-lg shadow-md border-4 border-gray-800 ml-0 w-100">
+            <h1 className="text-3xl font-bold mb-4">NEWS</h1>
+            <hr className="border-t-2 border-gray-400 mb-4" />
+            <ul className="list-disc pl-6 space-y-2 text-lg">
+              <li><a href="#">Prof. Sharma wins INSA award</a></li>
+              <li><a href="#">Mathematics fest concluded</a></li>
+              <li><a href="#">New faculty members joined</a></li>
+              <li><a href="#">Workshop on Number Theory</a></li>
+            </ul>
+            <div className="mt-4 text-right">
+              <a href="/news" className="text-sm inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-red-500 text-white rounded hover:brightness-110">View More</a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {/* Announcements */}
-      <div className="max-w-4xl mx-auto mt-16 p-6 bg-white rounded-lg shadow-md border-4 border-gray-800">
-        <h1 className="text-3xl font-bold mb-4">ANNOUNCEMENTS</h1>
-        <hr className="border-t-2 border-gray-400 mb-4" />
-        <ul className="list-disc pl-6 space-y-2 text-lg">
-          <li><a href="#">New B.Tech program launched</a></li>
-          <li><a href="#">PhD Admissions Open</a></li>
-          <li><a href="#">Mid-Sem Exam Schedule Released</a></li>
-          <li><a href="#">Convocation 2025 Notice</a></li>
-        </ul>
-        <div className="mt-4 text-right">
-          <a href="/announcements" className="text-sm inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-red-500 text-white rounded hover:brightness-110">View All</a>
-        </div>
-      </div>
 
-      {/* News */}
-      <div className="max-w-4xl mx-auto mt-16 p-6 bg-gray-900 text-white rounded-lg shadow-md border-4 border-gray-800">
-        <h1 className="text-3xl font-bold mb-4">NEWS</h1>
-        <hr className="border-t-2 border-gray-400 mb-4" />
-        <ul className="list-disc pl-6 space-y-2 text-lg">
-          <li><a href="#">Prof. Sharma wins INSA award</a></li>
-          <li><a href="#">Mathematics fest concluded</a></li>
-          <li><a href="#">New faculty members joined</a></li>
-          <li><a href="#">Workshop on Number Theory</a></li>
-        </ul>
-        <div className="mt-4 text-right">
-          <a href="/news" className="text-sm inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-red-500 text-white rounded hover:brightness-110">View More</a>
-        </div>
+      {/* stats */}
+      <div className="bg-gray-800 py-12 mt-50">
+  <div className="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-white text-center">
+    <div>
+      <div className="text-blue-500 text-5xl mb-2">
+        🎓
       </div>
+      <div className="text-3xl font-bold">45+</div>
+      <div className="uppercase text-sm tracking-widest mt-1">Ph.D. Students</div>
+    </div>
+    <div>
+      <div className="text-blue-500 text-5xl mb-2">
+        📘
+      </div>
+      <div className="text-3xl font-bold">35+</div>
+      <div className="uppercase text-sm tracking-widest mt-1">M.Sc. Students</div>
+    </div>
+    <div>
+      <div className="text-blue-500 text-5xl mb-2">
+        👨‍🏫
+      </div>
+      <div className="text-3xl font-bold">19+</div>
+      <div className="uppercase text-sm tracking-widest mt-1">Faculty</div>
+    </div>
+    <div>
+      <div className="text-blue-500 text-5xl mb-2">
+        💻
+      </div>
+      <div className="text-3xl font-bold">100+</div>
+      <div className="uppercase text-sm tracking-widest mt-1">B.Tech. Students</div>
+    </div>
+  </div>
+</div>
 
-      {/* Stats */}
-      <div className="max-w-6xl mx-auto mt-16 p-6 bg-white rounded-lg shadow-md flex flex-wrap justify-around gap-6">
-        <div className="text-center min-w-[10rem]">
-          <div className="text-red-500 text-3xl font-bold">45 +</div>
-          <div className="text-blue-600 text-xl">Ph.D. Students</div>
-        </div>
-        <div className="text-center min-w-[10rem]">
-          <div className="text-red-500 text-3xl font-bold">35 +</div>
-          <div className="text-blue-600 text-xl">M.Sc. Students</div>
-        </div>
-        <div className="text-center min-w-[10rem]">
-          <div className="text-red-500 text-3xl font-bold">19 +</div>
-          <div className="text-blue-600 text-xl">Faculty</div>
-        </div>
-        <div className="text-center min-w-[10rem]">
-          <div className="text-red-500 text-3xl font-bold">100 +</div>
-          <div className="text-blue-600 text-xl">B.Tech. Students</div>
-        </div>
-      </div>
 
     </div>
   );
