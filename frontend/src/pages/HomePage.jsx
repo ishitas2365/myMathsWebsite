@@ -22,7 +22,7 @@ const HomePage = () => {
       {/* ... */}
       <div className="grid grid-cols-2 max-h-200">
           {/* Quick Links */}
-        <div className="max-w-md mx-auto mt-16 p-6 bg-gray-900 text-white rounded-lg shadow-md border-4 border-gray-800 w-full mr-0">
+        <div className="max-w-md mx-auto mt-16 p-6 bg-[#040C3D] text-white rounded-lg shadow-md border-4 border-[#040C3D] w-full mr-0">
           <h1 className="text-3xl font-bold mb-4">QUICK LINKS</h1>
           <hr className="border-t-2 border-gray-400 mb-4" />
           <ul className="space-y-2 text-lg">
@@ -38,7 +38,7 @@ const HomePage = () => {
         </div>
         <div className="grid grid-cols-1">
           {/* Announcements */}
-          <div className="max-w-4xl mx-auto mt-16 p-6 bg-white rounded-lg shadow-md border-4 border-gray-800 ml-0 w-100">
+          <div className="max-w-4xl mx-auto mt-16 p-6 bg-white rounded-lg shadow-md border-4 border-gray-200 ml-0 w-100">
             <h1 className="text-3xl font-bold mb-4">ANNOUNCEMENTS</h1>
             <hr className="border-t-2 border-gray-400 mb-4" />
             <ul className="list-disc pl-6 space-y-2 text-lg">
@@ -52,7 +52,7 @@ const HomePage = () => {
             </div>
           </div>
           {/* News */}
-          <div className="max-w-4xl mx-auto mt-0 p-6 bg-gray-900 text-white rounded-lg shadow-md border-4 border-gray-800 ml-0 w-100">
+          <div className="max-w-4xl mx-auto mt-0 p-6 bg-[#040C3D] text-white rounded-lg shadow-md border-4 border-gray-200 ml-0 w-100">
             <h1 className="text-3xl font-bold mb-4">NEWS</h1>
             <hr className="border-t-2 border-gray-400 mb-4" />
             <ul className="list-disc pl-6 space-y-2 text-lg">
@@ -70,7 +70,7 @@ const HomePage = () => {
 
 
       {/* stats */}
-      <div className="bg-gray-800 py-12 mt-50">
+      <div className="bg-gray-500 py-7 mt-50">
   <div className="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-white text-center">
     <div>
       <div className="text-blue-500 text-5xl mb-2">
