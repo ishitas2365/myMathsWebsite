@@ -19,7 +19,7 @@ const HomePage = () => {
       </div>
 
 
-
+      {/* ... */}
       <div className="grid grid-cols-2 max-h-200">
           {/* Quick Links */}
         <div className="max-w-md mx-auto mt-16 p-6 bg-gray-900 text-white rounded-lg shadow-md border-4 border-gray-800 w-full mr-0">
