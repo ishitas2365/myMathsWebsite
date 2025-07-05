@@ -1,140 +1,138 @@
 import React from "react";
 import HeroCarousel from "../components/HeroCarousel";
-import "../styles/homepage.css";
+import "../styles/custom.css";
 
 const HomePage = () => {
   return (
-    <div className="homepage-container">
+    <div className="p-4">
       <HeroCarousel />
 
-      <div className="title_bar inter">
-        <img
-          src="/IITI_logo-removebg-preview (1).png"
-          alt="IIT Indore Logo"
-          className="logo"
-        />
-        <div className="title">
-          <h1 className="dept">DEPARTMENT OF MATHEMATICS</h1>
-          <h2 className="iit">INDIAN INSTITUTE OF TECHNOLOGY INDORE</h2>
-        </div>
-      </div>
-
-      <nav className="navbar">
-        <a href=""><h3 className="Home inter">Home</h3></a>
-        <a href=""><h3 className="Academic_Programs inter">Academic Programs</h3></a>
-        <a href=""><h3 className="People inter">People</h3></a>
-        <a href=""><h3 className="Research inter">Research</h3></a>
-        <a href=""><h3 className="Contact_Us inter">Contact Us</h3></a>
-        <a href=""><h3 className="Log_In inter">Log In</h3></a>
-      </nav>
-
-      <div className="photos">
-        <div className="main">
-          <div className="welcome">
-            <h1>Welcome to the Department of Mathematics</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+        <div className="border-[1.5rem] border-gray-800 rounded-lg p-6 bg-white shadow-lg">
+          <h2 className="text-3xl mb-4">ABOUT THE DEPARTMENT</h2>
+          <hr className="border-gray-400 mb-4" />
+          <div className="flex flex-col md:flex-row gap-4">
+            <p className="text-base leading-relaxed">
+              Since its inception in July 2009, the Department of Mathematics has evolved in several directions...
+            </p>
+            <img
+              src="/src/assets/images/abt_dept.jpg"
+              alt="About Dept"
+              className="w-full md:w-1/3 rounded-lg"
+            />
           </div>
-
-          <div className="know_more">
-            <a href="">KNOW MORE</a>
-          </div>
-        </div>
-      </div>
-
-      <div className="grid_display">
-        <div className="section-wrapper section-row-1">
-          <div className="about">
-            <h1 className="about_dept">ABOUT THE DEPARTMENT</h1>
-            <hr className="line" />
-            <div className="about-content">
-              <p>
-                Since its inception in July 2009, the Department of Mathematics has evolved in several directions...
-              </p>
-              <img src="/abt_dept.jpg" alt="About Dept" className="abt_dept_img" />
-            </div>
-            <div className="read_more">
-              <a href="#">READ MORE</a>
-            </div>
-          </div>
-
-          <div className="about">
-            <h1 className="message_from_hod about_dept">MESSAGE FROM HOD</h1>
-            <hr className="line" />
-            <div className="message_from_hod_container">
-              <img src="/sanjeev_iiti.jpg" alt="HOD" className="sjsingh" />
-              <p>
-                Since its inception in July 2009, the Department of Mathematics has evolved in several directions...
-              </p>
-            </div>
-          </div>
-
-          <div className="quick_links">
-            <h1 className="quick_heading">QUICK LINKS</h1>
-            <hr className="line" />
-            <div className="quick_links_container">
-              <ul>
-                <li><a href="#">Timetable</a></li>
-                <li><a href="#">Syllabus</a></li>
-                <li><a href="#">Faculty Login</a></li>
-                <li><a href="#">Research Areas</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Notices</a></li>
-                <li><a href="#">Admissions</a></li>
-                <li><a href="#">Student Portal</a></li>
-              </ul>
-            </div>
-          </div>
+          <a
+            href="#"
+            className="inline-block mt-4 bg-gradient-to-r from-pink-500 to-red-500 text-white py-2 px-4 rounded-md"
+          >
+            READ MORE
+          </a>
         </div>
 
-        <div className="section-wrapper section-row-2">
-          <div className="about announcements_box">
-            <h1 className="about_dept">ANNOUNCEMENTS</h1>
-            <hr className="line" />
-            <ul>
-              <li><a href="#">New B.Tech program launched</a></li>
-              <li><a href="#">PhD Admissions Open</a></li>
-              <li><a href="#">Mid-Sem Exam Schedule Released</a></li>
-              <li><a href="#">Convocation 2025 Notice</a></li>
-            </ul>
-            <div className="view-all-wrapper">
-              <a href="/announcements" className="view-all-btn">View All</a>
-            </div>
-          </div>
-
-          <div className="about news_box">
-            <h1 className="about_dept">NEWS</h1>
-            <hr className="line" />
-            <ul>
-              <li><a href="#">Prof. Sharma wins INSA award</a></li>
-              <li><a href="#">Mathematics fest concluded</a></li>
-              <li><a href="#">New faculty members joined</a></li>
-              <li><a href="#">Workshop on Number Theory</a></li>
-            </ul>
-            <div className="view-all-wrapper">
-              <a href="/news" className="view-all-btn">View More</a>
-            </div>
+        <div className="border-[1.5rem] border-gray-800 rounded-lg p-6 bg-white shadow-lg">
+          <h2 className="text-3xl mb-4 text-right">MESSAGE FROM HOD</h2>
+          <hr className="border-gray-400 mb-4" />
+          <div className="flex flex-col md:flex-row gap-4">
+            <img
+              src="/src/assets/images/sanjeev_iiti.jpg"
+              alt="HOD"
+              className="w-full md:w-1/3 rounded-lg"
+            />
+            <p className="text-base leading-relaxed">
+              Since its inception in July 2009, the Department of Mathematics has evolved in several directions...
+            </p>
           </div>
         </div>
       </div>
 
-      <div className="stats-container">
-        <div className="stat">
-          <div className="count">45 +</div>
-          <div className="label">Ph.D. Students</div>
+      <div className="border-[1.5rem] border-gray-800 rounded-lg p-6 bg-gray-900 text-white shadow-lg mb-8">
+        <h2 className="text-3xl mb-4">QUICK LINKS</h2>
+        <hr className="border-gray-400 mb-4" />
+        <ul className="flex flex-wrap gap-4 text-lg">
+          {[
+            "Timetable",
+            "Syllabus",
+            "Faculty Login",
+            "Research Areas",
+            "Events",
+            "Notices",
+            "Admissions",
+            "Student Portal"
+          ].map((link) => (
+            <li key={link} className="w-1/4">
+              <a href="#" className="hover:text-pink-400">
+                {link}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="flex flex-col md:flex-row gap-8 mb-8">
+        <div className="border-[1.5rem] border-gray-800 rounded-lg p-6 bg-white shadow-lg flex-1">
+          <h2 className="text-3xl mb-4">ANNOUNCEMENTS</h2>
+          <hr className="border-gray-400 mb-4" />
+          <ul className="list-disc pl-5 space-y-2">
+            <li>
+              <a href="#">New B.Tech program launched</a>
+            </li>
+            <li>
+              <a href="#">PhD Admissions Open</a>
+            </li>
+            <li>
+              <a href="#">Mid-Sem Exam Schedule Released</a>
+            </li>
+            <li>
+              <a href="#">Convocation 2025 Notice</a>
+            </li>
+          </ul>
+          <a
+            href="#"
+            className="inline-block mt-4 bg-gradient-to-r from-pink-500 to-red-500 text-white py-2 px-4 rounded-md"
+          >
+            View All
+          </a>
         </div>
-        <div className="stat">
-          <div className="count">35 +</div>
-          <div className="label">M.Sc. Students</div>
-        </div>
-        <div className="stat">
-          <div className="count">19 +</div>
-          <div className="label">Faculty</div>
-        </div>
-        <div className="stat">
-          <div className="count">100 +</div>
-          <div className="label">B.Tech. Students</div>
+
+        <div className="border-[1.5rem] border-gray-800 rounded-lg p-6 bg-white shadow-lg flex-1">
+          <h2 className="text-3xl mb-4">NEWS</h2>
+          <hr className="border-gray-400 mb-4" />
+          <ul className="list-disc pl-5 space-y-2">
+            <li>
+              <a href="#">Prof. Sharma wins INSA award</a>
+            </li>
+            <li>
+              <a href="#">Mathematics fest concluded</a>
+            </li>
+            <li>
+              <a href="#">New faculty members joined</a>
+            </li>
+            <li>
+              <a href="#">Workshop on Number Theory</a>
+            </li>
+          </ul>
+          <a
+            href="#"
+            className="inline-block mt-4 bg-gradient-to-r from-pink-500 to-red-500 text-white py-2 px-4 rounded-md"
+          >
+            View More
+          </a>
         </div>
       </div>
 
+      <div className="bg-white shadow-lg p-6 flex justify-around flex-wrap">
+        {[
+          { count: "45+", label: "Ph.D. Students" },
+          { count: "35+", label: "M.Sc. Students" },
+          { count: "19+", label: "Faculty" },
+          { count: "100+", label: "B.Tech. Students" }
+        ].map((stat) => (
+          <div key={stat.label} className="text-center m-4">
+            <div className="text-red-500 text-3xl font-bold">{stat.count}</div>
+            <div className="text-blue-600 text-lg mt-1">{stat.label}</div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
