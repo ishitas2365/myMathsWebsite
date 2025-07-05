@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import deptImg from '../assets/images/dept_img.jpg';
-import gallery2 from '../assets/images/gallery2.jpg';
-import gallery3 from '../assets/images/gallery3.jpg';
+import gallery2 from '../assets/images/dept_img.jpg';
+import gallery3 from '../assets/images/dept_img.jpg';
 
 const images = [
   { src: deptImg, showWelcome: true },
