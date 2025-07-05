@@ -142,7 +142,7 @@ body{
 }
 
 .welcome h1 {
-  font-size: clamp(21.5rem, 4vw, 5rem);
+  font-size: clamp(1.5rem, 4vw, 5rem);
 }
 
 
