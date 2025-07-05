@@ -12,25 +12,19 @@ const images = [
 
 const HeroCarousel = () => {
   const [current, setCurrent] = useState(0);
-  const [direction, setDirection] = useState('next');
-
-  const changeSlide = (newIndex, dir) => {
-    setDirection(dir);
-    setCurrent(newIndex);
-  };
 
   const nextSlide = () => {
-    changeSlide((current + 1) % images.length, 'next');
+    setCurrent((prev) => (prev + 1) % images.length);
   };
 
   const prevSlide = () => {
-    changeSlide((current - 1 + images.length) % images.length, 'prev');
+    setCurrent((prev) => (prev - 1 + images.length) % images.length);
   };
 
   return (
     <div className="relative overflow-hidden rounded-[2.5rem] mx-auto my-5 w-[97%] aspect-video">
       <div
-        className={`transition-transform duration-700 ease-in-out flex`}
+        className="flex transition-transform duration-700 ease-in-out"
         style={{
           transform: `translateX(-${current * 100}%)`,
         }}
@@ -38,22 +32,20 @@ const HeroCarousel = () => {
         {images.map((img, index) => (
           <div
             key={index}
-            className="min-w-full h-full relative bg-cover bg-center"
+            className="min-w-full h-full relative bg-cover bg-center flex items-center justify-center"
             style={{
               backgroundImage: `linear-gradient(rgba(6,6,6,0.5), rgba(39,38,38,0.5)), url(${img.src})`,
             }}
           >
             {img.showWelcome && (
-              <>
-                <div className="absolute inset-0 flex items-center justify-center flex-col text-white text-center px-4">
-                  <h1 className="welcome text-3xl md:text-5xl font-bold leading-snug">
-                    Welcome to the Department of Mathematics
-                  </h1>
-                  <div className="know_more mt-4 px-4 py-2 bg-gradient-to-r from-pink-500 to-pink-600 rounded-lg text-white text-lg cursor-pointer">
-                    <a href="#">KNOW MORE</a>
-                  </div>
+              <div className="text-white text-center px-4">
+                <h1 className="text-3xl md:text-5xl font-bold leading-snug mb-4">
+                  Welcome to the Department of Mathematics
+                </h1>
+                <div className="mt-4 px-4 py-2 bg-gradient-to-r from-pink-500 to-pink-600 rounded-lg text-white text-lg cursor-pointer">
+                  <a href="#">KNOW MORE</a>
                 </div>
-              </>
+              </div>
             )}
           </div>
         ))}
