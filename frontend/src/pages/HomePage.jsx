@@ -1,6 +1,10 @@
 import React from 'react';
 import HeroCarousel from "../components/HeroCarousel";
 
+// Importing images from assets folder
+import aboutDeptImg from '../assets/images/abt_dept.jpg';
+import hodImg from '../assets/images/sanjeev_iiti.jpg';
+
 const HomePage = () => {
   return (
     <div className="p-4">
@@ -14,7 +18,7 @@ const HomePage = () => {
             <p className="text-base leading-relaxed">
               Since its inception in July 2009, the Department of Mathematics has evolved in several directions...
             </p>
-            <img src="/abt_dept.jpg" alt="About Dept" className="w-full md:w-1/3 rounded-lg" />
+            <img src={aboutDeptImg} alt="About Dept" className="w-full md:w-1/3 rounded-lg" />
           </div>
           <a href="#" className="inline-block mt-4 bg-gradient-to-r from-pink-500 to-red-500 text-white py-2 px-4 rounded-md">READ MORE</a>
         </div>
@@ -23,7 +27,7 @@ const HomePage = () => {
           <h2 className="text-3xl mb-4 text-right">MESSAGE FROM HOD</h2>
           <hr className="border-gray-400 mb-4" />
           <div className="flex flex-col md:flex-row gap-4">
-            <img src="/sanjeev_iiti.jpg" alt="HOD" className="w-full md:w-1/3 rounded-lg" />
+            <img src={hodImg} alt="HOD" className="w-full md:w-1/3 rounded-lg" />
             <p className="text-base leading-relaxed">
               Since its inception in July 2009, the Department of Mathematics has evolved in several directions...
             </p>
@@ -68,8 +72,7 @@ const HomePage = () => {
       </div>
 
       <div className="bg-white shadow-lg p-6 flex justify-around flex-wrap">
-        {[
-          { count: '45+', label: 'Ph.D. Students' },
+        {[{ count: '45+', label: 'Ph.D. Students' },
           { count: '35+', label: 'M.Sc. Students' },
           { count: '19+', label: 'Faculty' },
           { count: '100+', label: 'B.Tech. Students' }
