@@ -23,30 +23,32 @@ const HeroCarousel = () => {
 
   return (
     <div
-      className="main relative"
+      className="main relative transition-all duration-700 ease-in-out"
       style={{
         backgroundImage: `linear-gradient(rgba(6,6,6,0.5), rgba(39,38,38,0.5)), url(${images[current].src})`,
       }}
     >
       {images[current].showWelcome && (
-        <div className="welcome">
-          <h1>Welcome to the Department of Mathematics</h1>
-        </div>
+        <>
+          <div className="welcome">
+            <h1>Welcome to the Department of Mathematics</h1>
+          </div>
+
+          <div className="know_more">
+            <a href="#">KNOW MORE</a>
+          </div>
+        </>
       )}
 
-      <div className="know_more">
-        <a href="#">KNOW MORE</a>
-      </div>
-
       <button
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition"
         onClick={prevSlide}
       >
         <ArrowLeft />
       </button>
 
       <button
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition"
         onClick={nextSlide}
       >
         <ArrowRight />
