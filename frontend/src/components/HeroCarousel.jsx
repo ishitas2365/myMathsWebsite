@@ -1,9 +1,7 @@
 import { useState } from 'react';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 const images = [
   '/dept_img.jpg',
-  '/gallery1.jpg',
   '/gallery2.jpg',
   '/gallery3.jpg',
   '/gallery4.jpg',
@@ -14,43 +12,45 @@ const HeroCarousel = () => {
   const [current, setCurrent] = useState(0);
 
   const nextSlide = () => {
-    setCurrent((prev) => (prev + 1) % images.length);
+    setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
   const prevSlide = () => {
-    setCurrent((prev) => (prev - 1 + images.length) % images.length);
+    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
 
   return (
-    <div className="relative w-full h-[60vh] md:h-[70vh] rounded-3xl overflow-hidden">
+    <div className="relative w-full overflow-hidden rounded-[4rem] my-8">
       <img
         src={images[current]}
-        alt="carousel"
-        className="w-full h-full object-cover"
+        alt="Department Slide"
+        className="w-full h-[70vh] object-cover"
       />
+
+      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white">
+        <h1 className="text-5xl md:text-7xl font-bold mb-4 welcome">
+          Welcome to the Department of Mathematics
+        </h1>
+        <div className="know_more text-xl md:text-2xl">
+          <a href="#">KNOW MORE</a>
+        </div>
+      </div>
 
       <button
         onClick={prevSlide}
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 p-2 rounded-full text-white hover:bg-opacity-80"
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-2 rounded-full"
       >
-        <ArrowLeft size={24} />
+        &#8592;
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 p-2 rounded-full text-white hover:bg-opacity-80"
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-2 rounded-full"
       >
-        <ArrowRight size={24} />
+        &#8594;
       </button>
-
-      {current === 0 && (
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white text-center p-4">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">Welcome to the Department of Mathematics</h1>
-          <a href="#" className="bg-gradient-to-r from-pink-500 to-red-500 text-white py-2 px-4 rounded-md text-lg hover:brightness-110">KNOW MORE</a>
-        </div>
-      )}
     </div>
   );
 };
 
-export default HeroCarousel;
+export default HeroCarousel; 
