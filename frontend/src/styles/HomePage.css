@@ -113,10 +113,10 @@ body{
 
 .main{
 /*     background-image:linear-gradient(
-      rgba(6, 6, 6, 0.5),   /* top gradient color */
-      rgba(39, 38, 38, 0.5)    /* bottom gradient color */
-    ),
-    url(/dept_img.jpg) ; */
+      rgba(6, 6, 6, 0.5),    top gradient color 
+      rgba(39, 38, 38, 0.5)     bottom gradient color 
+    ), */
+    url(/dept_img.jpg) ;
     width: 97%;
     height: 70vh;
     background-size: cover;
