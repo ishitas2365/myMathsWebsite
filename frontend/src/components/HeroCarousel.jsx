@@ -1,142 +1,60 @@
-import React from "react";
-import HeroCarousel from "../components/HeroCarousel";
-import "../styles/homepage.css";
+import { useState } from "react";
 
-const HomePage = () => {
+const images = [
+  "/dept_img.jpg",
+  "/gallery2.jpg",
+  "/gallery3.jpg",
+  "/gallery4.jpg",
+  "/gallery5.jpg",
+];
+
+const HeroCarousel = () => {
+  const [current, setCurrent] = useState(0);
+
+  const nextSlide = () => {
+    setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevSlide = () => {
+    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
   return (
-    <div className="homepage-container">
-      <HeroCarousel />
+    <div className="relative overflow-hidden rounded-3xl shadow-lg">
+      <img
+        src={images[current]}
+        alt="Department"
+        className="w-full h-[60vh] object-cover rounded-3xl"
+      />
 
-      <div className="title_bar inter">
-        <img
-          src="/IITI_logo-removebg-preview (1).png"
-          alt="IIT Indore Logo"
-          className="logo"
-        />
-        <div className="title">
-          <h1 className="dept">DEPARTMENT OF MATHEMATICS</h1>
-          <h2 className="iit">INDIAN INSTITUTE OF TECHNOLOGY INDORE</h2>
-        </div>
+      <button
+        onClick={prevSlide}
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 hover:bg-opacity-75"
+      >
+        &#8592;
+      </button>
+
+      <button
+        onClick={nextSlide}
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 hover:bg-opacity-75"
+      >
+        &#8594;
+      </button>
+
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-6 py-2 rounded-lg text-xl">
+        Welcome to the Department of Mathematics
       </div>
 
-      <nav className="navbar">
-        <a href=""><h3 className="Home inter">Home</h3></a>
-        <a href=""><h3 className="Academic_Programs inter">Academic Programs</h3></a>
-        <a href=""><h3 className="People inter">People</h3></a>
-        <a href=""><h3 className="Research inter">Research</h3></a>
-        <a href=""><h3 className="Contact_Us inter">Contact Us</h3></a>
-        <a href=""><h3 className="Log_In inter">Log In</h3></a>
-      </nav>
-
-      <div className="photos">
-        <div className="main">
-          <div className="welcome">
-            <h1>Welcome to the Department of Mathematics</h1>
-          </div>
-
-          <div className="know_more">
-            <a href="">KNOW MORE</a>
-          </div>
-        </div>
+      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2">
+        <a
+          href="#"
+          className="inline-block bg-gradient-to-r from-pink-500 to-red-500 text-white py-2 px-4 rounded-md hover:brightness-110"
+        >
+          KNOW MORE
+        </a>
       </div>
-
-      <div className="grid_display">
-        <div className="section-wrapper section-row-1">
-          <div className="about">
-            <h1 className="about_dept">ABOUT THE DEPARTMENT</h1>
-            <hr className="line" />
-            <div className="about-content">
-              <p>
-                Since its inception in July 2009, the Department of Mathematics has evolved in several directions...
-              </p>
-              <img src="/abt_dept.jpg" alt="About Dept" className="abt_dept_img" />
-            </div>
-            <div className="read_more">
-              <a href="#">READ MORE</a>
-            </div>
-          </div>
-
-          <div className="about">
-            <h1 className="message_from_hod about_dept">MESSAGE FROM HOD</h1>
-            <hr className="line" />
-            <div className="message_from_hod_container">
-              <img src="/sanjeev_iiti.jpg" alt="HOD" className="sjsingh" />
-              <p>
-                Since its inception in July 2009, the Department of Mathematics has evolved in several directions...
-              </p>
-            </div>
-          </div>
-
-          <div className="quick_links">
-            <h1 className="quick_heading">QUICK LINKS</h1>
-            <hr className="line" />
-            <div className="quick_links_container">
-              <ul>
-                <li><a href="#">Timetable</a></li>
-                <li><a href="#">Syllabus</a></li>
-                <li><a href="#">Faculty Login</a></li>
-                <li><a href="#">Research Areas</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Notices</a></li>
-                <li><a href="#">Admissions</a></li>
-                <li><a href="#">Student Portal</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div className="section-wrapper section-row-2">
-          <div className="about announcements_box">
-            <h1 className="about_dept">ANNOUNCEMENTS</h1>
-            <hr className="line" />
-            <ul>
-              <li><a href="#">New B.Tech program launched</a></li>
-              <li><a href="#">PhD Admissions Open</a></li>
-              <li><a href="#">Mid-Sem Exam Schedule Released</a></li>
-              <li><a href="#">Convocation 2025 Notice</a></li>
-            </ul>
-            <div className="view-all-wrapper">
-              <a href="/announcements" className="view-all-btn">View All</a>
-            </div>
-          </div>
-
-          <div className="about news_box">
-            <h1 className="about_dept">NEWS</h1>
-            <hr className="line" />
-            <ul>
-              <li><a href="#">Prof. Sharma wins INSA award</a></li>
-              <li><a href="#">Mathematics fest concluded</a></li>
-              <li><a href="#">New faculty members joined</a></li>
-              <li><a href="#">Workshop on Number Theory</a></li>
-            </ul>
-            <div className="view-all-wrapper">
-              <a href="/news" className="view-all-btn">View More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="stats-container">
-        <div className="stat">
-          <div className="count">45 +</div>
-          <div className="label">Ph.D. Students</div>
-        </div>
-        <div className="stat">
-          <div className="count">35 +</div>
-          <div className="label">M.Sc. Students</div>
-        </div>
-        <div className="stat">
-          <div className="count">19 +</div>
-          <div className="label">Faculty</div>
-        </div>
-        <div className="stat">
-          <div className="count">100 +</div>
-          <div className="label">B.Tech. Students</div>
-        </div>
-      </div>
-
     </div>
   );
 };
 
-export default HomePage;
+export default HeroCarousel;
