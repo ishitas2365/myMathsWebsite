@@ -161,7 +161,7 @@ body{
   left: 50%;
   transform: translate(-50%, 20%);
   margin-top: 1.875rem;
-  font-size: clamp(1rem, 2.5vw, 1.875rem);
+  font-size: clamp(1rem, 2vw, 1.875rem);
 }
 
 .know_more a{
