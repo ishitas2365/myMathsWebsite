@@ -1,5 +1,7 @@
 import React from 'react';
 import '../styles/HomePage.css';
+import abt_department from '../assets/images/abt_dept.jpg';
+import HoD_img from '../assets/images/sanjeev_iiti.jpg';
 
 const HomePage = () => {
   return (
@@ -26,7 +28,7 @@ const HomePage = () => {
               <p>
                 Since its inception in July 2009, the Department of Mathematics has evolved in several directions. The department presently offers M.Sc. and Ph. D. programs in Mathematics. In addition to these programs, the department teaches several Mathematics courses to the undergraduate and postgraduate students of various engineering and science departments. The department aims to focus on providing a comprehensive curriculum at undergraduate and postgraduate levels, relevant research and career opportunities in India and abroad. The department is starting B. Tech. program in Mathematics and Computing from 2023. This program is especially designed ...
               </p>
-              <img src="../assets/images/abt_dept.jpg" alt="" className="abt_dept_img" />
+              <img src={abt_department} alt="" className="abt_dept_img" />
             </div>
 
             <div className="read_more">
@@ -39,7 +41,7 @@ const HomePage = () => {
             <hr className="line" />
 
             <div className="message_from_hod_container">
-              <img src="../assets/images/sanjeev_iiti.jpg" alt="" className="sjsingh" />
+              <img src={HoD_img} alt="" className="sjsingh" />
               <p>
                 Since its inception in July 2009, the Department of Mathematics has evolved in several directions. The department presently offers M.Sc. and Ph. D. programs in Mathematics. In addition to these programs, the department teaches several Mathematics courses to the undergraduate and postgraduate students of various engineering and science departments. The department aims to focus on providing a comprehensive curriculum at undergraduate and postgraduate levels, relevant research and career opportunities in India and abroad. The department is starting B. Tech. program in Mathematics and Computing from 2023. This program is especially designed ...
               </p>
