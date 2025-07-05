@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import deptImg from '../assets/images/dept_img.jpg';
-import gallery2 from '../assets/images/gallery2.jpg';   // Add more images
+import gallery2 from '../assets/images/gallery2.jpg';
 import gallery3 from '../assets/images/gallery3.jpg';
 
 const images = [
@@ -26,25 +26,16 @@ const HeroCarousel = () => {
       className="main relative"
       style={{
         backgroundImage: `linear-gradient(rgba(6,6,6,0.5), rgba(39,38,38,0.5)), url(${images[current].src})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        borderRadius: '2.5rem',
-        width: '97%',
-        margin: '1.25rem auto',
-        aspectRatio: '20 / 9',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
       }}
     >
       {images[current].showWelcome && (
         <div className="welcome">
-          <h1>Welcome to Department of Mathematics</h1>
+          <h1>Welcome to the Department of Mathematics</h1>
         </div>
       )}
 
       <div className="know_more">
-        <a href="#">Know More</a>
+        <a href="#">KNOW MORE</a>
       </div>
 
       <button
