@@ -28,11 +28,12 @@
 }
 
 body{
-/*     font-size: 62.5%; */
     background-color: rgba(204, 202, 202, 0.89); 
 }
 
-
+.body_homepage{
+      font-size: 62.5%;
+}
 
 /* ###### Title Bar ###### */
 
