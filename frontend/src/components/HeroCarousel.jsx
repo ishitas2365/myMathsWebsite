@@ -1,58 +1,65 @@
-import { useState } from "react";
+import { useState } from 'react';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
+import deptImg from '../assets/images/dept_img.jpg';
+import gallery2 from '../assets/images/gallery2.jpg';   // Add more images
+import gallery3 from '../assets/images/gallery3.jpg';
 
 const images = [
-  "/dept_img.jpg",
-  "/gallery2.jpg",
-  "/gallery3.jpg",
-  "/gallery4.jpg",
-  "/gallery5.jpg",
+  { src: deptImg, showWelcome: true },
+  { src: gallery2, showWelcome: false },
+  { src: gallery3, showWelcome: false },
 ];
 
 const HeroCarousel = () => {
   const [current, setCurrent] = useState(0);
 
   const nextSlide = () => {
-    setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    setCurrent((prev) => (prev + 1) % images.length);
   };
 
   const prevSlide = () => {
-    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    setCurrent((prev) => (prev - 1 + images.length) % images.length);
   };
 
   return (
-    <div className="relative overflow-hidden rounded-3xl shadow-lg">
-      <img
-        src={images[current]}
-        alt="Department"
-        className="w-full h-[60vh] object-cover rounded-3xl"
-      />
+    <div
+      className="main relative"
+      style={{
+        backgroundImage: `linear-gradient(rgba(6,6,6,0.5), rgba(39,38,38,0.5)), url(${images[current].src})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        borderRadius: '2.5rem',
+        width: '97%',
+        margin: '1.25rem auto',
+        aspectRatio: '20 / 9',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      {images[current].showWelcome && (
+        <div className="welcome">
+          <h1>Welcome to Department of Mathematics</h1>
+        </div>
+      )}
+
+      <div className="know_more">
+        <a href="#">Know More</a>
+      </div>
 
       <button
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70"
         onClick={prevSlide}
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 hover:bg-opacity-75"
       >
-        &#8592;
+        <ArrowLeft />
       </button>
 
       <button
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70"
         onClick={nextSlide}
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 hover:bg-opacity-75"
       >
-        &#8594;
+        <ArrowRight />
       </button>
-
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-6 py-2 rounded-lg text-xl">
-        Welcome to the Department of Mathematics
-      </div>
-
-      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2">
-        <a
-          href="#"
-          className="inline-block bg-gradient-to-r from-pink-500 to-red-500 text-white py-2 px-4 rounded-md hover:brightness-110"
-        >
-          KNOW MORE
-        </a>
-      </div>
     </div>
   );
 };
