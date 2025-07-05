@@ -32,9 +32,9 @@ const HeroCarousel = () => {
 
   return (
     <div
-      className={main relative transition-opacity duration-300 ease-in-out ${fade ? 'opacity-100' : 'opacity-0'}}
+      className={`main relative transition-opacity duration-300 ease-in-out ${fade ? 'opacity-100' : 'opacity-0'}`}
       style={{
-        backgroundImage: linear-gradient(rgba(6,6,6,0.5), rgba(39,38,38,0.5)), url(${images[current].src}),
+        backgroundImage: `linear-gradient(rgba(6,6,6,0.5), rgba(39,38,38,0.5)), url(${images[current].src})`,
       }}
     >
       {images[current].showWelcome && (
@@ -65,3 +65,5 @@ const HeroCarousel = () => {
     </div>
   );
 };
+
+export default HeroCarousel;
