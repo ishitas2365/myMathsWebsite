@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/HomePage.css';
+import HeroCarousel from '../components/HeroCarousel';
 import abt_department from '../assets/images/abt_dept.jpg';
 import HoD_img from '../assets/images/sanjeev_iiti.jpg';
 
@@ -7,17 +8,8 @@ const HomePage = () => {
   return (
     <div className="body_Homepage">
       <div className="photos">
-        <div className="main">
-          <div className="welcome">
-            <h1>Welcome to the Department of Mathematics</h1>
-          </div>
-
-          <div className="know_more">
-            <a href="">KNOW MORE</a>
-          </div>
-        </div>
+        <HeroCarousel />
       </div>
-
       <div className="grid_display">
         <div className="section-wrapper section-row-1">
           <div className="about">
