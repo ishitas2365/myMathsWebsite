@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import deptImg from '../assets/images/dept_img.jpg';
 import gallery2 from '../assets/images/dept_img.jpg';
@@ -12,18 +12,27 @@ const images = [
 
 const HeroCarousel = () => {
   const [current, setCurrent] = useState(0);
+  const [fade, setFade] = useState(true);
+
+  const changeSlide = (newIndex) => {
+    setFade(false); // Start fade out
+    setTimeout(() => {
+      setCurrent(newIndex);
+      setFade(true); // Fade back in
+    }, 300); // Match fade duration (CSS: 300ms)
+  };
 
   const nextSlide = () => {
-    setCurrent((prev) => (prev + 1) % images.length);
+    changeSlide((current + 1) % images.length);
   };
 
   const prevSlide = () => {
-    setCurrent((prev) => (prev - 1 + images.length) % images.length);
+    changeSlide((current - 1 + images.length) % images.length);
   };
 
   return (
     <div
-      className="main relative transition-all duration-700 ease-in-out"
+      className={`main relative transition-opacity duration-300 ease-in-out ${fade ? 'opacity-100' : 'opacity-0'}`}
       style={{
         backgroundImage: `linear-gradient(rgba(6,6,6,0.5), rgba(39,38,38,0.5)), url(${images[current].src})`,
       }}
