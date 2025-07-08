@@ -13,6 +13,7 @@ import PeoplePage from './pages/PeoplePage';
 import ContactPage from './pages/ContactPage';
 import ResearchPage from './pages/ResearchPage';
 import GalleryPage from './pages/GalleryPage';
+import RegisterPage from './pages/RegisterPage';
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         path:'contact',
         element:<ContactPage/>
+      },
+      {
+        path: 'register',
+        element: <RegisterPage />
       },
       {
         path:'research',
